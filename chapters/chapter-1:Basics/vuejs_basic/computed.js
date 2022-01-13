@@ -65,7 +65,18 @@ const app = Vue.createApp({
         }
 
 
-    }
+    },
+
+    //computed properties
+
+    computed:{
+
+        computedProps(){
+            return this.name + "varma";
+        }
+
+
+    },
     
     });
     

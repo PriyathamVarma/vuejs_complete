@@ -33,21 +33,15 @@
       <p>Click here for getting the site <a v-bind:href=" bindLink ">Google with v-bind</a></p>
       <p>Navbar and its {{outputOptions() +1}}</p>
 
-      <form v-on:submit = "submitForm ">
+      <p>{{ name }}</p>
 
-        <input type="text" name="address" placeholder="Enter the address"><br/>
-        <input type="number" name="phone" placeholder="Enter the phone number"><br/>
-        <input type="email" name="email" placeholder="Enter the email"><br/>
 
-        <button class="btn btn-success">Submit</button>
-
-      </form>
-
-      <p>You submitted {{ address }} with phone no: {{phone}} and email:{{email}}</p>
-
-      <input type="text" v-on:input="setName($event,'varma')">
+      <input type="text" v-bind:value="name" v-on:input="setName($event,'varma')">
+      <!-- using v-model -->
+      <input type="text" v-model="name">
+      <button class="btn btn-info" @click="resetbutton">Reset</button>
       
-      <p>You entered {{ name }}</p>
+      <p>You entered {{ outPut() }}</p>
 
       
     </div>
@@ -68,6 +62,6 @@
 <!--- Vue code CDN ---->
 <!-- development version, includes helpful console warnings -->
 <script src="https://unpkg.com/vue@next"></script>
-<script src="events.js"></script>
+<script src="v-once.js"></script>
 </body>
 </html>
