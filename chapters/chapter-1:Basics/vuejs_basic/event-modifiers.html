@@ -31,8 +31,24 @@
       <p>Click here for getting the site <a href="www.google.com">Google without v-bind</a></p>
       <p>Click here for getting the site <a v-bind:href=" bindLink ">Google with v-bind</a></p>
       <p>Navbar and its {{outputOptions() +1}}</p>
+
+      <form v-on:submit = "submitForm ">
+
+        <input type="text" name="address" placeholder="Enter the address"><br/>
+        <input type="number" name="phone" placeholder="Enter the phone number"><br/>
+        <input type="email" name="email" placeholder="Enter the email"><br/>
+
+        <button class="btn btn-success">Submit</button>
+
+      </form>
+
+      <p>You submitted {{ address }} with phone no: {{phone}} and email:{{email}}</p>
+
       <input type="text" v-on:input="setName($event,'varma')">
+      
       <p>You entered {{ name }}</p>
+
+      
     </div>
 
     <div class="col-sm-4">
