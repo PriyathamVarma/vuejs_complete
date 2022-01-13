@@ -1,0 +1,12 @@
+# Create a html page and attach a js file conatining vue script
+
+# The link for vue js cdn that has to be placed in last at body tag ending is 
+<!-- development version, includes helpful console warnings -->
+<script src="https://unpkg.com/vue@next"></script>
+
+# Now, in app.js you can create a vue instance using the code
+const app = Vue.createapp({});
+
+# Mount this app using app.mount('#id name from the index.html')
+
+# Use the data function where you want to output some data inside the div element
