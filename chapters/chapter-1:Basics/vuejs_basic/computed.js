@@ -77,6 +77,16 @@ const app = Vue.createApp({
 
 
     },
+
+    //watchers
+
+    watch:{
+
+        //name(newValue,oldValue)
+        name(value){
+            console.log(value + "name has changed");
+        }
+    },
     
     });
     

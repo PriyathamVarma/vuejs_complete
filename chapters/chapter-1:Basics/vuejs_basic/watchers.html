@@ -1,0 +1,69 @@
+
+
+<!-- Main Index file -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Vue js</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="styles.css"/>
+
+</head>
+<body>
+
+<div class="container-fluid p-5 bg-success text-white text-center">
+  <h1>My Complete Vue with html</h1>
+  <p>Lets create a e commerce store</p> 
+</div>
+  
+<div class="container mt-5">
+  <div class="row">
+
+    <div class="col-sm-4" id="vuejs-basics">
+        <h3 v-once> Original Score {{ score }}</h3>
+      <h3>Zone 1, SCORE:{{ outputScore() }}</h3>
+      <!-- html tag using vue js -->
+      <p v-html="htmlContent"></p>  </p>
+      <button class="btn btn-success" v-on:click =" incrementScore(5) "> + </button><span><button class="btn btn-warning" @click =" decrementScore(5) "> - </button></span>
+      <p>Click here for getting the site <a href="www.google.com">Google without v-bind</a></p>
+      <p>Click here for getting the site <a v-bind:href=" bindLink ">Google with v-bind</a></p>
+      <p>Navbar and its {{outputOptions() +1}}</p>
+
+      <p>{{ name }}</p>
+
+
+      <input type="text" v-bind:value="name" v-on:input="setName($event,'varma')">
+      <!-- using v-model -->
+      <input type="text" v-model="name">
+      <button class="btn btn-info" @click="resetbutton">Reset</button>
+      
+      <p>You entered {{ outPut() }}</p><!-- need parentheses as not a computed props ---->
+
+      <p>{{ computedProps }}</p>
+
+      
+    </div>
+
+    <div class="col-sm-4">
+        <h3>Zone 2</h3>
+        <p>Main and its components</p>
+        <p>This zone conatins all main options to control the ecommerce functionalities</p>
+    </div>
+    <div class="col-sm-4">
+        <h3>Zone 3</h3>
+        <p>Sidebar and its components</p>
+        <p>This zone conatins all sidebar options to control the ecommerce functionalities</p>
+    </div>
+  </div>
+</div>
+
+<!--- Vue code CDN ---->
+<!-- development version, includes helpful console warnings -->
+<script src="https://unpkg.com/vue@next"></script>
+<script src="computed.js"></script>
+</body>
+</html>
